@@ -1,0 +1,165 @@
+ul{
+    list-style-type:none;
+    display:flex;
+    gap:30px;
+    height:50px;
+    font-family:Georgia,'Times New Roman',Times,serif;
+    float:right;
+    margin-right:100px;
+}
+
+ul a{
+    text-decoration:none;
+    color:black;
+}
+
+ul a li:hover{
+    color:yellow;
+}
+
+/* Video Background */
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+/* Dark Overlay */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+    z-index:-1;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+}
+
+/* Hero Section */
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background: url("bg.jpg") center/cover no-repeat;
+}
+
+/* Hero Section */
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+/* Welcome Text */
+.welcome{
+    font: size 40px;
+    letter-spacing:8px;
+    animation: fadeDown 1s ease;
+}
+
+/* Typing Animation */
+.typing{
+    font-size:70px;
+    color:#fff;
+    text-shadow:0 0 10px #8a2be2,
+                0 0 20px #8a2be2,
+                0 0 40px #8a2be2;
+
+    overflow:hidden;
+    white-space:nowrap;
+    border-right:4px solid white;
+    width:0;
+    animation:
+        typing 4s steps(15,end) forwards,
+        blink .8s infinite;
+}
+
+/* Paragraph */
+.fade{
+    font-size:25px;
+    margin-top:20px;
+    opacity:0;
+    animation:fadeIn 2s forwards;
+    animation-delay:4s;
+}
+
+/* Button */
+.btn{
+    margin-top:40px;
+    text-decoration:none;
+    color:white;
+    border:2px solid #9b59ff;
+    padding:15px 40px;
+    border-radius:40px;
+    transition:.4s;
+    animation:float 2s infinite;
+}
+
+.btn:hover{
+    background:#9b59ff;
+    box-shadow:0 0 20px #9b59ff;
+}
+
+/* Animations */
+
+@keyframes typing{
+    from{width:0;}
+    to{width:16ch;}
+}
+
+@keyframes blink{
+    50%{border-color:transparent;}
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
